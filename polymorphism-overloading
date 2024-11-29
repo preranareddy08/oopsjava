@@ -1,0 +1,34 @@
+/*               POLYMORPHISM
+                 /         \
+ Method overloading       Method overriding
+ (compile-time)           (run-time)
+ Here, we discuss only method overloading,overrding is discussed later in interfaces.
+ NOTE:In method overloading
+   -same function in different forms.The differnece can be in either return type or number of parameters but not the function name.
+*/
+class Student{
+    String name;
+    int age;
+     void print(String name)
+     {
+         System.out.println(this.name);
+     }
+     int print(int age)
+     {
+        return this.age;
+     }
+     void print(String name, int age)
+     {
+        System.out.println(this.name+" "+this.age);
+     }
+}
+class Main{
+    public static void main(String[] args){
+        Student s1 = new Student();
+        s1.name = "prerana";
+        s1.age = 19;
+        s1.print(s1.name);
+        System.out.println(s1.print(19));
+        s1.print(s1.name,s1.age);
+    }
+}
