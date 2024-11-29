@@ -1,0 +1,51 @@
+/*INHERITANCE
+   -There are 5 types of inheritance in c++(including multiple) and 4 types in java(excluding multiple).
+   -Single-level Inheritance:parent class->child class.
+   -Multi-level Inheritance:parent class->child class(parent)->child class.
+   -Hierarchial Inheritance:parent class->child class
+                                 |->child class.
+  - Hybrid Inheritance:combination of all.
+ */
+ class Shape{
+     void printparent()
+     {
+         System.out.println("i'm  the parent");
+     }
+}
+ class Triangle extends Shape{ //single-level inheritance
+  void printsubclass()
+  {
+      System.out.println("child of shape");
+  }
+ }
+ class EquilateralTriangle extends Triangle{ //multi-level
+    void printsubsubclass()
+    {
+        System.out.println("child of Triangle");
+    }
+ }
+ class Circle extends Shape{ //hierarchial
+     void printchild(){
+         System.out.println("child of shape");
+     }
+ }
+ class Main{
+     public static void main(String[] args)
+     {
+        EquilateralTriangle t1 = new EquilateralTriangle();
+         t1.printparent();
+         t1.printsubclass();
+         t1.printsubsubclass();
+         Circle c = new Circle();
+         c.printchild();
+         
+     }
+ }
+
+output
+i'm  the parent
+child of shape
+child of Triangle
+child of shape
+
+=== Code Execution Successful ===
