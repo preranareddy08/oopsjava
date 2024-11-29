@@ -1,0 +1,38 @@
+/*ABSTRACTION
+ -abstract keyword is used before class.
+ -In an abstract class methods can be abstract or non-abstract.
+ -for an abstract method,implementation is not required.
+ */
+ abstract class Animal{
+   abstract void walk(); //abstract method
+    void print()
+    {
+    System.out.println("parent class animal which is abstract");
+    }
+}
+class Horse extends Animal{
+    void walk()
+    {
+        System.out.println("walks with 4 legs");
+    }
+}
+class Chicken extends Animal{
+    void walk()
+    {
+        System.out.println("walks with 2 legs");
+    }
+}
+class Main{
+    public static void main(String[] args)
+    {
+        Horse h1=new Horse();
+        h1.walk();
+        h1.print();
+    }
+
+}
+output:
+walks with 4 legs
+parent class animal which is abstract
+
+=== Code Execution Successful ===
