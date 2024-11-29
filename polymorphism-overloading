@@ -32,3 +32,9 @@ class Main{
         s1.print(s1.name,s1.age);
     }
 }
+output:
+prerana
+19
+prerana 19
+
+=== Code Execution Successful ===
