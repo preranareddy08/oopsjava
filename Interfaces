@@ -1,0 +1,35 @@
+/*INTERFACE
+ -By default properties and methods are abstract.No need of specifying abstract keyword.
+ -To access members of a interface class,public access specifier must be mentioned while accessing.
+ -implements keyword is used to inherit an interface class.
+ -All the fields in interfaces are public, static and final by default.
+ -All methods are public & abstract by default.
+ -A class that implements an interface must implement all the methods declared in the interface.
+ -Interfaces support the functionality of multiple inheritance.
+*/
+interface Animal{
+    void walk();
+}
+class Horse implements Animal{
+   public void walk(){
+        System.out.println("walks with 4 legs");
+    }
+}
+class Chicken implements Animal{
+    public void walk()
+    {
+      System.out.println("walks with 2 legs");
+    }
+}
+class Main{
+    public static void main(String[] args)
+    {
+        Horse h1=new Horse();
+        h1.walk();
+      
+    }
+}
+output:
+walks with 4 legs
+
+=== Code Execution Successful ===
